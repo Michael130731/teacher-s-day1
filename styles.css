@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+  background: #90cbf3;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 100%;
+  max-width: 700px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  z-index: 1;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #90cbf3;
+}
+
+.name {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #90cbf3;
+}
+
+.dots {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  user-select: none;
+  letter-spacing: 0.2em;
+}
+
+.dots span {
+  color: rgba(127,127,127,0.5);
+}
+
+.dots .active {
+  color: rgba(0,0,0,0.5);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 3em;
+  color: rgba(127,127,127,0.5);
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    font-size: 1.5em;
+  }
+  .name {
+    font-size: 1em;
+  }
+  .dots {
+    font-size: 1.7em;
+  }
+  .nav-button {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    font-size: 1.3em;
+  }
+  .name {
+    font-size: 0.9em;
+  }
+  .dots {
+    font-size: 1.5em;
+  }
+  .nav-button {
+    font-size: 2em;
+  }
+}
+
+.nav-button:hover {
+  transform: translateY(-50%) scale(1.15);
+  transition: transform 0.2s ease;
+}
