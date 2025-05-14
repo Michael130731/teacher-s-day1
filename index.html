@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>롤링 페이퍼</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>롤링 페이퍼</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="landscapeWarning" class="orientation-warning">
+      가로 화면으로 돌려주세요.
+    </div>
+    <div id="mainContent" class="main-content">
+      <button class="nav-button left" onclick="prevPage()">◀</button>
+      <div class="page" id="pageContent">
+        <div class="emoji emoji-top-left">🌸</div>
+        <div class="emoji emoji-bottom-right">💐</div>
+        <div class="content"></div>
+        <div class="name"></div>
+      </div>
+      <div class="dots" id="footerDots"></div>
+      <button class="nav-button right" onclick="nextPage()">▶</button>
+    </div>
 
-  <button class="nav-button left" onclick="prevPage()">◀</button>
-
-  <div class="page" id="pageContent">
-    <div class="content">“롤링페이퍼 첫 번째 메시지입니다.”</div>
-    <div class="name">- 홍길동 -</div>
-  </div>
-  <div class="dots" id="footerDots">●··</div>
-
-  <button class="nav-button right" onclick="nextPage()">▶</button>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

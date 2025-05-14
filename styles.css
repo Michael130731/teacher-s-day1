@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'GangwonEduHyeonokT_OTFMediumA';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -12,9 +19,12 @@ body {
 }
 
 .page {
-  width: 100%;
+  position: relative;
+  width: 90vw;
   max-width: 700px;
-  height: 50%;
+  min-width: 320px;
+  height: 50vh;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,31 +36,37 @@ body {
   z-index: 1;
   box-sizing: border-box;
   text-align: center;
+  overflow: hidden;
 }
 
+
+
 .content {
-  font-size: 1.8em;
+  font-family: 'GangwonEduHyeonokT_OTFMediumA', cursive;
+  font-size: 2.4em;
   font-weight: bold;
   margin-bottom: 20px;
   color: #90cbf3;
 }
 
 .name {
+  font-family: 'GangwonEduHyeonokT_OTFMediumA', cursive;
   font-style: italic;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 2.4em;
   color: #90cbf3;
 }
 
 .dots {
   position: absolute;
   bottom: 40px;
-  width: 100%;
-  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: monospace;
   font-size: 2em;
   user-select: none;
   letter-spacing: 0.2em;
+  white-space: nowrap;
 }
 
 .dots span {
@@ -81,6 +97,25 @@ body {
 .nav-button.right {
   right: 10px;
 }
+
+.emoji {
+  position: absolute;
+  font-size: 3em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+.emoji-top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.emoji-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
 
 @media (max-width: 768px) {
   .content {
@@ -115,4 +150,26 @@ body {
 .nav-button:hover {
   transform: translateY(-50%) scale(1.15);
   transition: transform 0.2s ease;
+}
+
+.orientation-warning {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #90cbf3;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: block;
 }
